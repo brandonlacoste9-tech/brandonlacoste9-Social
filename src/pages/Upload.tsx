@@ -246,7 +246,7 @@ export const Upload: React.FC = () => {
         ) : (
           <button
             onClick={() => fileInputRef.current?.click()}
-            className="w-full aspect-square rounded-2xl border-2 border-dashed border-white/20 flex flex-col items-center justify-center gap-4 hover:border-gold-400 hover:bg-white/5 transition-al[...]
+            className="w-full aspect-square rounded-2xl border-2 border-dashed border-white/20 flex flex-col items-center justify-center gap-4 hover:border-gold-400 hover:bg-white/5 transition-all"
           >
             <svg
               className="w-16 h-16 text-white/40"
