@@ -8,7 +8,7 @@ import { BottomNav } from '../components/layout/BottomNav';
 import { FeedGrid } from '../components/layout/FeedGrid';
 import { SearchBar } from '../components/features/SearchBar';
 import { supabase } from '../lib/supabase';
-import { QUEBEC_HASHTAGS, QUEBEC_REGIONS } from '../../quebecFeatures';
+import { QUEBEC_HASHTAGS, QUEBEC_REGIONS } from '../lib/quebecFeatures';
 import type { Post } from '../types';
 
 export const Explore: React.FC = () => {

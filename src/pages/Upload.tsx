@@ -8,7 +8,7 @@ import { Header } from '../components/layout/Header';
 import { Button } from '../components/ui/Button';
 import { supabase } from '../lib/supabase';
 import { extractHashtags, generateId } from '../lib/utils';
-import { QUEBEC_REGIONS } from '../../quebecFeatures';
+import { QUEBEC_REGIONS } from '../lib/quebecFeatures';
 import { generateCaption as generateAICaption, generateHashtags as generateAIHashtags, analyzeImage } from '../services/geminiService';
 import { moderateContent, isUserBanned } from '../services/moderationService';
 import { checkAchievements } from '../services/achievementService';

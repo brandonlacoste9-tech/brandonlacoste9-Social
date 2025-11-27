@@ -11,7 +11,7 @@ import { Button } from '../components/ui/Button';
 import { supabase } from '../lib/supabase';
 import { toast } from '../components/ui/Toast';
 import { generateId } from '../lib/utils';
-import { QUEBEC_REGIONS } from '../../quebecFeatures';
+import { QUEBEC_REGIONS } from '../lib/quebecFeatures';
 import { useTheme, PRESET_THEMES } from '../contexts/ThemeContext';
 import type { User } from '../types';
 
