@@ -24,6 +24,53 @@
     "Analyze this text using the Sensory Cortex",
     "Run a Mind Structure analysis on this idea"
   ],
+  "tools": [
+    {
+      "name": "dispatch_task",
+      "description": "Delegate a task to the Hive. Routes to the best Bee (DocBee, CodeBee, etc.) via the Kernel Foreman.",
+      "input_schema": {
+        "type": "object",
+        "properties": {
+          "type": {
+            "type": "string",
+            "description": "High-level task type, e.g., document_summary, code_review, ops_check"
+          },
+          "priority": {
+            "type": "string",
+            "enum": ["low", "medium", "high"],
+            "description": "Relative urgency"
+          },
+          "payload": {
+            "type": "object",
+            "description": "Task-specific payload. Example for DocBee: {\"action\":\"summarize\",\"content\":\"...\"}"
+          }
+        },
+        "required": ["type", "payload"]
+      },
+      "example_call": {
+        "type": "document_summary",
+        "priority": "high",
+        "payload": {
+          "action": "summarize",
+          "content": "The Colony OS architecture relies on a spherical manifold mind."
+        }
+      }
+    },
+    {
+      "name": "get_status",
+      "description": "Check status of a dispatched task (stub; optional if not implemented yet).",
+      "input_schema": {
+        "type": "object",
+        "properties": {
+          "task_id": {
+            "type": "string",
+            "description": "ID returned by dispatch_task"
+          }
+        },
+        "required": ["task_id"]
+      }
+    }
+  ],
   "capabilities": {
     "sensory_pulse": {
       "endpoint": "/sensory/pulse",
